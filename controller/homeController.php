@@ -1,7 +1,7 @@
 <?php
 
 
-# Include html header
+# Include html header -- view/header.php
 include( APP_VIEW . '/header.php' );
 
 # Include main navigation

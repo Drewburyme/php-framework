@@ -3,17 +3,17 @@
 // Load bootstrap to apply configuration
 include('config/bootstrap.php');
 
-// Process URL into Application routing parameters
+// Process URL into Application routing parameters -- via model/route.php
 $route = new route();
 
-// Start session to track user
+// Start session to track user -- built in method to track users
 session_start();
 
-// Intitalize Flash Message
+// Intitalize Flash Message -- SESSION is a array to track the user
 $_SESSION['flashMessage'] = null;
 
 
-// User security check
+// User security check -- forces login in they aren't loged in
 defined('APP_AUTH_TYPE') or
     die ("Configuration Setting: APP_AUTH_TYPE is not set.");
 if ( 0 !== APP_AUTH_TYPE && !isset($_SESSION['username']) && 'auth' != $route->getController() ) {
@@ -32,6 +32,10 @@ switch ( $route->getController() ) {
 
     case 'home':
         include( APP_CONTROLLER . '/homeController.php');
+        break;
+
+    case 'product':
+        include( APP_CONTROLLER . '/productController.php');
         break;
 
     default:
