@@ -10,18 +10,19 @@ include( APP_VIEW . '/nav.php' );
 switch ( $route->getAction() ) {
 
     case 'home':
-        $sql = "SELECT * FROM product ORDER BY name";
+        $products = loadProducts($mysql);
 
-        $result = $mysql->query($sql);
-
-      $products = $result->fetch_all(MYSQLI_ASSOC);
-
-        include( APP_VIEW .'/product/productSubNav.php' );
+        //include( APP_VIEW .'/product/productSubNav.php' );
         include( APP_VIEW .'/product/homeView.php' );
         break;
 
+    case 'new':
+        include( APP_VIEW .'/product/newView.php' );
+        break;
+
     default:
-        include( APP_VIEW .'/product/productSubNav.php' );
+      $products = loadProducts($mysql);
+        //include( APP_VIEW .'/product/productSubNav.php' );
         include( APP_VIEW .'/product/homeView.php' );
         break;
 }
@@ -29,3 +30,15 @@ switch ( $route->getAction() ) {
 
 # Include html footer
 include( APP_VIEW . '/footer.php' );
+
+// local functions
+
+function loadProducts($dbConnection) {
+  $sql = "SELECT * FROM product ORDER BY name";
+
+  $result = $dbConnection->query($sql);
+
+  $products = $result->fetch_all(MYSQLI_ASSOC);
+
+  return $products;
+}

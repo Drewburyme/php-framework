@@ -2,32 +2,47 @@ html {
   position: relative;
   min-height: 100%;
 
+
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 140px;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-image: url('/project1/redBackground.png');
+  background-color:red;
 }
 
 
 body > .container {
-  padding: 60px 15px 0;
+  padding: 60px 60px 0;
+
+}
+div.navbar {
+    font-size: 200%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.2), 0 12px 20px 0 rgba(0,0,0, 0.15);
+    text-align: center;
 }
 
+.nav {
+  text-size: 24px;
+}
 .pageContent {
-    min-height: 600px;
+    /*min-height: 600px;*/
 }
-
+div > .pageContent:hover {
+  box-shadow: 0 15px 25px 0 rgba(0,0,0, 0.2), 0 20px 30px 0 rgba(0,0,0, 0.15);
+}
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 120px;
   background-color: #f5f5f5;
 }
 
 #footer > .container {
   padding: 15px 15px 0 15px;
+
 }

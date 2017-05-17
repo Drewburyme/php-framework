@@ -9,14 +9,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="<?php print APP_DOC_ROOT.'/home';?>">MHA Swim School</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php print APP_DOC_ROOT.'/home';?>">Home</a></li>
-            <li><a href="<?php print APP_DOC_ROOT.'/product';?>">Products</a></li>
-            <li><a href="#">Menu 3</a></li>
-            <li class="dropdown">
+            <li><a href="<?php print APP_DOC_ROOT.'/lessons';?>">Lesson Details</a></li>
+            <li><a href="<?php print APP_DOC_ROOT.'/product';?>">By Visits Online</a></li>
+            <li><a href="<?php print APP_DOC_ROOT.'/lessons';?>">Register</a></li>
+<!--        <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 4 <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -27,7 +27,7 @@
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
               </ul>
-            </li>
+            </li>-->
           </ul>
 
 <?php if ( 0 !== APP_AUTH_TYPE && isset($_SESSION["username"]) ) { ?>

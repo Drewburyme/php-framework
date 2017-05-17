@@ -10,7 +10,8 @@
     <title>My Project</title />
 
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="<?php echo APP_VENDORS; ?>/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="////cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"/>
     <link rel="stylesheet" href="<?php echo APP_DOC_ROOT; ?>/css/style.css"/>
 

@@ -1,14 +1,13 @@
 
         <!-- page content -->
         <div class="col-md-9">
-          <div class="pageContent">
-            <table class="table table-hover">
+          <div class="well pageContent" position="center">
+            <table class="table table-bordered">
               <thead>
               <tr>
                 <th>Product</th>
                 <th>Description</th>
                 <th>Price</th>
-                <th>Quantity</th>
               </tr>
             </thead>
               <tbody>
@@ -21,8 +20,7 @@
               <tr>
                 <td><?php print $product['name'];?></td>
                 <td><?php print $product['description'];?></td>
-                <td><?php print $product['retail'];?></td>
-                <td><?php print $product['qty_on_hand'];?></td>
+                <td><?php print $product['cost'];?></td>
 
 
               </tr>
